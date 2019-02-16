@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.humanize'
+    'django.contrib.humanize',
+    'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig'
 ]
 
 MIDDLEWARE = [
@@ -138,3 +140,13 @@ STATICFILES_DIRS = [
 # Media Folder Settings
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
 MEDIA_URL  = '/media/'
+
+
+
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
+
